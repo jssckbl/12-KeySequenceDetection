@@ -15,6 +15,12 @@
     pressed.push(e.key);
     // to look at each index in an array from the end and work back
     pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    // check array to see if it contains the secretCode
+    if (pressed.join('').includes(secretCode)) {
+      console.log('IT WORKED YOU ARE AWESOME');
+      // adds rainbows and/or unicorns each time secretCode is achieved
+      cornify_add();
+    }
     console.log(pressed);
   })
 </script>
